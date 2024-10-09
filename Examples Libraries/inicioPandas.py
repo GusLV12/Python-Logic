@@ -107,3 +107,35 @@ print(dataframe['leche'].unique()) #unique nos devuelve los valores unicos de un
 #contar cuantos valores se repiten
 print('Contar cuantos valores se repiten: ')
 print(dataframe['pan'].value_counts())
+
+#Obtener columnas
+print('Obtener columnas: ')
+print(dataframe.columns)
+
+#Obtener indices
+print('Obtener indices: ')
+print(dataframe.index)
+
+#Obtener filas
+print('Obtener filas: ')
+dataframe = pd.DataFrame(data, row, column)
+dataframe['indice'] = [1, 2, 3, 4]
+dataframe = dataframe.set_index('indice')
+print(dataframe)
+
+#Obtener por coluimna
+print(dataframe.sort_values(['pan'])) #Ordenar por columna
+
+#Describir dataframe
+print('Describir dataframe: ')
+print(dataframe.describe())
+
+#Pasar dataframe a un archivo CSV
+print('Pasar dataframe a un archivo CSV: ')
+dataframe.to_csv('DataFrame.csv')
+print(dataframe)
+
+#Cargar archivo CSV
+print('Cargar archivo CSV: ')
+dataFrameRead = pd.read_csv('DataFrame.csv')
+print(dataFrameRead)
